@@ -9,7 +9,7 @@ ABA is an applied science devoted to developing procedures which will produce ob
 ## Technical Description
 
 ### Architecture
-![Architecture](Images/Architecture.PNG)
+![Architecture](Images/Architecture.png)
 
 #### Power App (Front End) 
 
