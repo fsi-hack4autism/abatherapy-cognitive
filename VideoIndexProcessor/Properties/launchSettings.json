@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VideoIndexProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "TestData/Retelling.json"
+    }
+  }
+}
