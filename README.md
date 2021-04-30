@@ -1,6 +1,8 @@
 # ABA Therapy Cognitive App
 
+
 This product has been built as a part of FSI Autism Hackathon 2021 using Microsoft Azure Services. 
+
 
 ## Product Description
 
@@ -11,7 +13,7 @@ ABA is an applied science devoted to developing procedures which will produce ob
 ### Architecture
 ![Architecture](Images/Architecture.png)
 
-#### Power App (Front End) 
+#### Power App (Front End)
 
 This the UI where the user can upload recorded videos of therapy and can get the useful insights from the processed videos.
 ![Add New Video](Images/app-add-new-video.PNG)
@@ -24,8 +26,8 @@ The uploaded video is going to stored in the input container of the Azure Cloud.
 ![Container](Images/Containers.JPG)
 
 #### Logic App # 1 - Video Indexer
- 
-Once the new video is uploaded the video indexer gets triggered and video gets processsed. 
+
+Once the new video is uploaded the video indexer gets triggered and video gets processsed.
 ![Logic App1](Images/LogicApp1.JPG)
 
 #### Logic App # 2
@@ -45,5 +47,6 @@ It is a Business Analytics Service used for getting useful insights from the pro
 ## Contribution
 
 Any contributor is very welcome to contribute in this initiative.
+
 
 ## Future Scope
