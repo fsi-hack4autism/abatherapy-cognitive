@@ -1,0 +1,120 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Create_SAS_URI_by_path": {
+                "inputs": {
+                    "body": {
+                        "Permissions": "Read,Write,List,Delete"
+                    },
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['azureblob_1']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/datasets/default/CreateSharedLinkByPath",
+                    "queries": {
+                        "path": "@triggerBody()?['Path']"
+                    }
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "Get_Account_Access_Token": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['videoindexer-v2']['connectionId']"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/auth/@{encodeURIComponent('trial')}/Accounts/@{encodeURIComponent('0202a953-304d-48e2-b960-7a3b7bfc0ab2')}/AccessToken",
+                    "queries": {
+                        "allowEdit": true
+                    }
+                },
+                "runAfter": {
+                    "Create_SAS_URI_by_path": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "Upload_video_and_index": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['videoindexer-v2']['connectionId']"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/@{encodeURIComponent('trial')}/Accounts/@{encodeURIComponent('0202a953-304d-48e2-b960-7a3b7bfc0ab2')}/Videos",
+                    "queries": {
+                        "accessToken": "@body('Get_Account_Access_Token')",
+                        "callbackUrl": "https://prod-64.eastus.logic.azure.com:443/workflows/e72e6a8549a2485bbc5c55f4a676d0f9/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=newNsaE6So1T4-4bgMZ_XF4MgTIPwXTbSdacYCEBNj0",
+                        "name": "@triggerBody()?['Name']",
+                        "videoUrl": "@body('Create_SAS_URI_by_path')?['WebUrl']"
+                    }
+                },
+                "runAfter": {
+                    "Get_Account_Access_Token": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "When_a_blob_is_added_or_modified_(properties_only)": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['azureblob_1']['connectionId']"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/datasets/default/triggers/batch/onupdatedfile",
+                    "queries": {
+                        "checkBothCreatedAndModifiedDateTime": false,
+                        "folderId": "JTJmaW5wdXRkYXRh",
+                        "maxFileCount": 10
+                    }
+                },
+                "metadata": {
+                    "JTJmaW5wdXRkYXRh": "/inputdata"
+                },
+                "recurrence": {
+                    "frequency": "Minute",
+                    "interval": 1
+                },
+                "splitOn": "@triggerBody()",
+                "type": "ApiConnection"
+            }
+        }
+    },
+    "parameters": {
+        "$connections": {
+            "value": {
+                "azureblob_1": {
+                    "connectionId": "/subscriptions/698b8b44-b1f1-4dbe-a732-fb9428fd3c77/resourceGroups/FSI_Autism_Hackathon_UseCae2_LogicApps-RG/providers/Microsoft.Web/connections/azureblob-2",
+                    "connectionName": "azureblob-2",
+                    "id": "/subscriptions/698b8b44-b1f1-4dbe-a732-fb9428fd3c77/providers/Microsoft.Web/locations/eastus/managedApis/azureblob"
+                },
+                "videoindexer-v2": {
+                    "connectionId": "/subscriptions/698b8b44-b1f1-4dbe-a732-fb9428fd3c77/resourceGroups/FSI_Autism_Hackathon_UseCae2_LogicApps-RG/providers/Microsoft.Web/connections/videoindexer-v2",
+                    "connectionName": "videoindexer-v2",
+                    "id": "/subscriptions/698b8b44-b1f1-4dbe-a732-fb9428fd3c77/providers/Microsoft.Web/locations/eastus/managedApis/videoindexer-v2"
+                }
+            }
+        }
+    }
+}
