@@ -1,20 +1,24 @@
-# abatherapy-cognitive
+# ABA Therapy Cognitive App
+
+
+This product has been built as a part of FSI Autism Hackathon 2021 using Microsoft Azure Services. 
+
 
 ## Product Description
 
-Applied behavior Analysis(ABA) Therapy is a type of therapy that can improve social, communication and learning skills. The purpose of this product is to get useful insights from video recorded therapy sessions. Parents or Therapists can use this app to Upload a therapy video and visualize the performance through the app.
-
---SCREENSHOT POWER APP
-
-This product has been built as a part of Microsoft Autism Hackathon 2021 using Azure Services.
+ABA is an applied science devoted to developing procedures which will produce observable changes in behavior. Applied behaviour Analysis(ABA) Therapy is a type of therapy that can improve social,communication and learning skills. The purpose of this product is to get useful insights from video recorded therapy sessions. Parents or Therapists can use this app to Upload a therapy video and visualize the performance through the app. 
 
 ## Technical Description
 
 ### Architecture
+![Architecture](Images/Architecture.png)
 
 #### Power App (Front End)
 
-This the UI where the user will be uploading the therapy recorded videos.
+This the UI where the user can upload recorded videos of therapy and can get the useful insights from the processed videos.
+![Add New Video](Images/app-add-new-video.PNG)
+![View Existing Videos](Images/app-existing-videos.PNG)
+![Review Video](Images/app-review-video.jpeg)
 
 #### Containers
 
@@ -44,6 +48,5 @@ It is a Business Analytics Service used for getting useful insights from the pro
 
 Any contributor is very welcome to contribute in this initiative.
 
-## References
 
 ## Future Scope
