@@ -16,8 +16,8 @@ ABA is an applied science devoted to developing procedures which will produce ob
 #### Power App (Front End)
 
 This the UI where the user can upload recorded videos of therapy and can get the useful insights from the processed videos.
-![Add New Video](Images/app-add-new-video.PNG)
-![View Existing Videos](Images/app-existing-videos.PNG)
+![Add New Video](Images/app-add-new-video.jpeg)
+![View Existing Videos](Images/app-existing-videos.jpeg)
 ![Review Video](Images/app-review-video.jpeg)
 
 #### Containers
@@ -50,3 +50,5 @@ Any contributor is very welcome to contribute in this initiative.
 
 
 ## Future Scope
+Visaulization can be catered towards emotions more deeply which can reflect the behaviour
+Ability to review and add comments by therapists
