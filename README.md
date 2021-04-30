@@ -2,17 +2,17 @@
 
 ## Product Description
 
-Applied behaviour Analysis(ABA) Therapy is a type of therapy that can improve social,communication and learning skills. The purpose of this product is to get useful insights from video recorded therapy sessions. Parents or Therapists can use this app to Upload a therapy video and visualize the performance through the app. 
+Applied behavior Analysis(ABA) Therapy is a type of therapy that can improve social, communication and learning skills. The purpose of this product is to get useful insights from video recorded therapy sessions. Parents or Therapists can use this app to Upload a therapy video and visualize the performance through the app.
 
 --SCREENSHOT POWER APP
 
-This product has been built as a part of Microsoft Autism Hackathon 2021 using Azure Services. 
+This product has been built as a part of Microsoft Autism Hackathon 2021 using Azure Services.
 
 ## Technical Description
 
 ### Architecture
 
-#### Power App (Front End) 
+#### Power App (Front End)
 
 This the UI where the user will be uploading the therapy recorded videos.
 
@@ -22,8 +22,8 @@ The uploaded video is going to stored in the input container of the Azure Cloud.
 ![Container](Images/Containers.JPG)
 
 #### Logic App # 1 - Video Indexer
- 
-Once the new video is uploaded the video indexer gets triggered and video gets processsed. 
+
+Once the new video is uploaded the video indexer gets triggered and video gets processsed.
 ![Logic App1](Images/LogicApp1.JPG)
 
 #### Logic App # 2
@@ -44,6 +44,6 @@ It is a Business Analytics Service used for getting useful insights from the pro
 
 Any contributor is very welcome to contribute in this initiative.
 
-## Refrences
+## References
 
 ## Future Scope
