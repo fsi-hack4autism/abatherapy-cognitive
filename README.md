@@ -17,11 +17,16 @@ ABA is an applied science devoted to developing procedures which will produce ob
 
 This the UI where the user can upload recorded videos of therapy and can get the useful insights from the processed videos.
 
-![Add New Video](Images/app-add-new-video.jpeg)
+<p align="center">
+  <img src="https://github.com/fsi-hack4autism/abatherapy-cognitive/blob/main/Images/app-add-new-video.jpeg">
+  <img src="https://github.com/fsi-hack4autism/abatherapy-cognitive/blob/main/Images/app-existing-videos.jpeg">
+</p>
 
-![View Existing Videos](Images/app-existing-videos.jpeg)
 
-![Review Video](Images/app-review-video.jpeg)
+<p align="center">
+  <img src="https://github.com/fsi-hack4autism/abatherapy-cognitive/blob/main/Images/app-review-video.jpeg">
+</p>
+
 
 #### Containers
 
