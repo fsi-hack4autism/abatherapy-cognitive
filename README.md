@@ -16,8 +16,11 @@ ABA is an applied science devoted to developing procedures which will produce ob
 #### Power App (Front End)
 
 This the UI where the user can upload recorded videos of therapy and can get the useful insights from the processed videos.
+
 ![Add New Video](Images/app-add-new-video.jpeg)
+
 ![View Existing Videos](Images/app-existing-videos.jpeg)
+
 ![Review Video](Images/app-review-video.jpeg)
 
 #### Containers
@@ -50,5 +53,9 @@ Any contributor is very welcome to contribute in this initiative.
 
 
 ## Future Scope
-Visaulization can be catered towards emotions more deeply which can reflect the behaviour
-Ability to review and add comments by therapists
+1. Have a way to visually track expected behavior of the patient vs actual behavior displayed by looking into the patient's emotions and sentiments over a timeline. This would give the parents and therapist a view of how the therapy sessions are progressing.
+2. Ability to review and add comments by therapists.
+3. Increase the allowed size of uploaded videos from 100MB.
+4. Display captured insights alongside video playback. Ability to add custom insights using on-screen clickers.
+5. Enhancing the video viewing experience so that it is streamed rather then downloaded to local storage.
+6. Dynamically refresh power BI datasets whenever there is an update to the Cosmos DB.
