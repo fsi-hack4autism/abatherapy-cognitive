@@ -46,6 +46,4 @@ It is a Business Analytics Service used for getting useful insights from the pro
 
 Any contributor is very welcome to contribute in this initiative.
 
-## Refrences
-
 ## Future Scope
