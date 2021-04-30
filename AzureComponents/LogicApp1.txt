@@ -15,7 +15,7 @@
                     "method": "post",
                     "path": "/datasets/default/CreateSharedLinkByPath",
                     "queries": {
-                        "path": "@triggerBody()?['Path']"
+                        "path": "/videos/Retelling 3-2-15-v2.mp4"
                     }
                 },
                 "runAfter": {},
@@ -85,12 +85,13 @@
                     "path": "/datasets/default/triggers/batch/onupdatedfile",
                     "queries": {
                         "checkBothCreatedAndModifiedDateTime": false,
-                        "folderId": "JTJmaW5wdXRkYXRh",
+                        "folderId": "JTJmdmlkZW9z",
                         "maxFileCount": 10
                     }
                 },
                 "metadata": {
-                    "JTJmaW5wdXRkYXRh": "/inputdata"
+                    "JTJmaW5wdXRkYXRh": "/inputdata",
+                    "JTJmdmlkZW9z": "/videos"
                 },
                 "recurrence": {
                     "frequency": "Minute",
